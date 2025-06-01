@@ -15,7 +15,7 @@ function App() {
 
   const handleRecognize = async () => {
     if (!file) {
-      message.warning('请先选择图片');
+      message.warning('Please select an image');
       return;
     }
     setLoading(true);
@@ -32,9 +32,9 @@ function App() {
       } catch (e) {
         text = '';
       }
-      setResult(text || '未识别到内容');
+      setResult(text || 'Unable to recognize the content');
     } catch (err) {
-      message.error('识别失败');
+      message.error('Failed to recognize the content');
     } finally {
       setLoading(false);
     }
@@ -56,7 +56,7 @@ function App() {
   return (
     <Layout style={{ minHeight: '100vh', background: '#f0f6ff' }}>
       <Header style={{ background: '#1677ff' }}>
-        <Title style={{ color: '#fff', margin: 0 }} level={3}>图片内容识别</Title>
+        <Title style={{ color: '#fff', margin: 0 }} level={3}>Text Extractor</Title>
       </Header>
       <Content style={{
         padding: '40px 16px',
@@ -66,13 +66,13 @@ function App() {
         minHeight: 'calc(100vh - 128px)'
       }}>
         <Card style={{ width: 400, background: '#fff', boxShadow: '0 2px 8px #f0f1f2', textAlign: 'center' }}>
-          <Paragraph style={{ color: '#1677ff', fontWeight: 500 }}>上传一张图片，识别图片中的内容</Paragraph>
+          <Paragraph style={{ color: '#1677ff', fontWeight: 500 }}>Upload an image, recognize the text in the image</Paragraph>
           <Upload {...uploadProps}>
-            <Button icon={<UploadOutlined />}>选择图片</Button>
+            <Button icon={<UploadOutlined />}>Select Image</Button>
           </Upload>
           {preview && (
             <div style={{ marginTop: 16 }}>
-              <img src={preview} alt="预览" style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, boxShadow: '0 1px 4px #e6e6e6' }} />
+              <img src={preview} alt="Preview" style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, boxShadow: '0 1px 4px #e6e6e6' }} />
               <Button
                 type="primary"
                 style={{ marginTop: 16, width: '100%' }}
@@ -86,14 +86,14 @@ function App() {
           )}
           {loading && <Spin style={{ marginTop: 16 }} />}
           {result && (
-            <Card type="inner" title="识别结果" style={{ marginTop: 24, background: '#f6faff' }}>
+            <Card type="inner" title="Recognition Result" style={{ marginTop: 24, background: '#f6faff' }}>
               <Paragraph>{result}</Paragraph>
             </Card>
           )}
         </Card>
       </Content>
       <Footer style={{ textAlign: 'center', background: '#f0f6ff', color: '#1677ff' }}>
-        ocr_text © 2024
+        ocr_text © 2025 by Zichen Zhao
       </Footer>
     </Layout>
   );
