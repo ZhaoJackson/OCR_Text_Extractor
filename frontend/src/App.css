@@ -1,0 +1,21 @@
+body {
+  background: #f0f6ff;
+}
+
+.ant-layout {
+  background: #f0f6ff;
+}
+
+.ant-card {
+  border-radius: 12px;
+}
+
+.ant-btn-primary {
+  background: #1677ff;
+  border-color: #1677ff;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background: #4096ff;
+  border-color: #4096ff;
+} 
