@@ -31,6 +31,7 @@ ocr_text/
 - Send image to backend and n8n webhook for processing
 - Display extracted text to the user
 - Responsive and styled UI with Ant Design
+- Run this on Vercel website: https://text-extract-app.vercel.app/
 
 ---
 
