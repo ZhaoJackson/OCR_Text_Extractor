@@ -80,7 +80,7 @@ function App() {
                 loading={loading}
                 disabled={loading}
               >
-                开始识别
+                Start Recognition
               </Button>
             </div>
           )}
