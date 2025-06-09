@@ -1,45 +1,64 @@
-# ocr_text
+# OCR Text Extractor
 
-一个简单的图片内容识别 Web 应用。
+A simple web application that extracts text from uploaded images using Optical Character Recognition (OCR). Built with a Node.js + Express backend and a React + Ant Design frontend.
 
-## 项目结构
+---
+
+## Project Structure
 
 ```
 ocr_text/
-├── backend/         # Node.js Express 后端
-│   └── index.js
-├── frontend/        # React 前端
+├── backend/ 
+│   ├── index.js
 │   ├── package.json
-│   └── src/
-│       ├── App.js
-│       └── index.js
+│   └── package-lock.json
+├── frontend/   
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
 ├── README.md
-└── package.json
 ```
+---
 
-## 功能
-- 用户上传图片
-- 后端调用 webhook（留空，返回模拟结果）
-- 前端展示识别结果
+## Features
 
-## 启动方法
+- Upload image files via browser
+- Send image to backend and n8n webhook for processing
+- Display extracted text to the user
+- Responsive and styled UI with Ant Design
 
-### 1. 启动后端
+---
+
+## Getting Started
+
+### 1. Start the Backend
+
 ```bash
 cd backend
 npm install
 npm start
 ```
 
-### 2. 启动前端
+Runs on: http://localhost:5000
+
+---
+
+### 2. Start the Frontend
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
-
-前端默认端口：3000，后端默认端口：5000。
+Runs on: http://localhost:3000
 
 ---
 
-如需自定义 webhook 或端口号，请修改对应代码。 
+## License
+
+- Created by Zichen Zhao — for demo, learning, and personal use.

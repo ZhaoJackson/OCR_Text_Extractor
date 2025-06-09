@@ -17,14 +17,11 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
     return res.status(400).json({ error: 'No file uploaded' });
   }
 
-  // 这里调用 webhook，暂时留空
-  // const webhookResult = await axios.post('WEBHOOK_URL', ...)
 
-  // 模拟 webhook 返回结果
   const result = {
     success: true,
     data: {
-      text: '模拟识别结果：这是图片中的内容。'
+      text: 'Result: This is the content of the image.'
     }
   };
 
