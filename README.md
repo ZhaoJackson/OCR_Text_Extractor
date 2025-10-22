@@ -116,19 +116,6 @@ Using n8n cloud means you typically only deploy the frontend to Vercel.
 
 ---
 
-## Troubleshooting
-
-- Port 5000 in use on macOS:
-  - Disable AirPlay Receiver in System Settings → General → AirDrop & Handoff, or
-  - Use another port: `PORT=5051 npm start`
-- CORS errors:
-  - Backend enables CORS by default
-  - When calling n8n directly from the browser, ensure the n8n webhook allows cross-origin requests
-- n8n response shape mismatch:
-  - The frontend expects Gemini’s `candidates[0].content.parts[0].text`. Adjust mapping or frontend parsing if your workflow differs.
-
----
-
 ## License
 
 Created by Zichen Zhao — for demo, learning, and personal use.
